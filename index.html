@@ -1,305 +1,460 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang=en>
 <head>
-    <!-- Meta -->
+    <!-- so meta -->
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="HandheldFriendly" content="True">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5" />
-
-    <!-- Open Graph -->
     <meta property="og:type" content="website">
-    <meta property="og:title" content="Nischal's blog">
-    <meta property="og:url" content="https://nischal52.github.io/index.html">
-    <meta property="og:site_name" content="Nischal's blog">
+    <meta property="og:title" content="alex&#39;s corner">
+    <meta property="og:url" content="https://alexcorner.dev">
+    <meta property="og:site_name" content="alex&#39;s corner">
     <meta property="og:locale" content="en_US">
-    <meta property="article:author" content="Nischal">
+    <meta property="article:author" content="alex">
     <meta name="twitter:card" content="summary">
+    
+    
+      
+        
+          <link rel="shortcut icon" href="/images/favicon.ico">
+        
+      
+      
+        
+          <link rel="icon" type="image/png" href="/images/android-chrome-192x192.png" sizes="192x192">
+        
+      
+      
+        
+          <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+        
+      
+    
+    <!-- title -->
+    <title>alex's corner</title>
+    <!-- async scripts -->
+    <!-- Google Analytics -->
 
-    <!-- Title -->
-    <title>Nischal's blog</title>
 
-    <!-- Icons -->
-    <link rel="shortcut icon" href="/images/favicon.ico">
-    <link rel="icon" type="image/png" href="/images/android-chrome-192x192.png" sizes="192x192">
-    <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+    <!-- Umami Analytics -->
 
-    <!-- Font Awesome -->
-    <link rel="preload" as="style"
-        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-        crossorigin="anonymous"
-        onload="this.onload=null;this.rel='stylesheet'" />
 
-    <!-- Google Font -->
-    <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
+    <!-- styles -->
+    
+<link rel="stylesheet" href="/css/style.css">
 
-    <style>
-        body {
-            background: #0d1117;
-            color: #f5e6d3;
-            font-family: 'VT323', monospace;
-            font-size: 28px;
-            line-height: 1.5;
-            max-width: 1100px;
-            margin: auto;
-            padding: 40px 60px;
+    <!-- persian styles -->
+    
+    <!-- rss -->
+    
+    
+	<!-- mathjax -->
+	
+		<script type="text/x-mathjax-config">
+		  MathJax.Hub.Config({
+			tex2jax: {
+			  skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+			  inlineMath: [['$','$']]
+			}
+		  });
+		</script>
+		<script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-MML-AM_CHTML' async></script>
+	
+<!-- hexo injector head_end start -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css">
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/hexo-math@4.0.0/dist/style.css">
+<!-- hexo injector head_end end --><meta name="generator" content="Hexo 7.3.0">
+<style>
+    /* additional minimal styling for projects section - keeps original theme colors and font */
+    .projects-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+        gap: 1.5rem;
+        margin-top: 1.2rem;
+        margin-bottom: 2rem;
+    }
+    .project-card {
+        background: var(--bg-secondary, #f5f5f5);
+        border-radius: 8px;
+        padding: 1rem 1.2rem 1.2rem 1.2rem;
+        transition: transform 0.2s ease, box-shadow 0.2s ease;
+        box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+        border: 1px solid var(--border-color, #eaeaea);
+    }
+    .project-card:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+    }
+    .project-title {
+        font-size: 1.25rem;
+        font-weight: 600;
+        margin-bottom: 0.6rem;
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        flex-wrap: wrap;
+    }
+    .project-title a {
+        color: var(--link-color, #2c7da0);
+        text-decoration: none;
+        border-bottom: 1px dotted transparent;
+    }
+    .project-title a:hover {
+        border-bottom-color: var(--link-color, #2c7da0);
+    }
+    .project-desc {
+        font-size: 0.9rem;
+        line-height: 1.45;
+        color: var(--text-secondary, #4a4a4a);
+        margin-bottom: 0.8rem;
+    }
+    .project-tech {
+        font-size: 0.75rem;
+        font-family: monospace;
+        color: var(--text-muted, #6c757d);
+        border-top: 1px solid var(--border-light, #ececec);
+        padding-top: 0.6rem;
+        margin-top: 0.2rem;
+    }
+    .section-header {
+        display: flex;
+        align-items: baseline;
+        justify-content: space-between;
+        border-bottom: 1px solid var(--border-color, #e2e2e2);
+        padding-bottom: 0.35rem;
+        margin-top: 2rem;
+        margin-bottom: 1rem;
+    }
+    .section-header .h1 {
+        font-size: 1.6rem;
+        font-weight: 600;
+        letter-spacing: -0.3px;
+    }
+    @media (max-width: 640px) {
+        .projects-grid {
+            grid-template-columns: 1fr;
         }
-
-        a {
-            color: #f5e6d3;
-            text-decoration: underline;
-        }
-
-        a:hover {
-            color: #39ffcc;
-        }
-
-        #header {
-            margin-bottom: 70px;
-        }
-
-        #header a {
-            text-decoration: none;
-        }
-
-        #logo {
-            width: 72px;
-            height: 72px;
-            border-radius: 4px;
-            object-fit: cover;
-            vertical-align: middle;
-            margin-right: 20px;
-        }
-
-        #title {
-            display: inline-block;
-            vertical-align: middle;
-        }
-
-        h1 {
-            font-size: 64px;
-            font-weight: normal;
-            margin: 0;
-            color: #f5e6d3;
-        }
-
-        #nav {
-            margin-top: 10px;
-        }
-
-        #nav ul {
-            list-style: none;
-            padding: 0;
-        }
-
-        #nav li {
-            display: inline;
-            margin-right: 18px;
-        }
-
-        #nav li a {
-            color: #39ffcc;
-            text-decoration: none;
-            font-size: 30px;
-        }
-
-        #about {
-            margin-top: 60px;
-            margin-bottom: 100px;
-        }
-
-        #about a {
-            text-decoration: none;
-        }
-
-        .icon {
-            margin: 0 6px;
-            font-size: 28px;
-        }
-
-        .h1 {
-            font-size: 64px;
-            color: #39ffcc;
-            margin-bottom: 30px;
-            display: block;
-        }
-
-        .h1 a {
-            color: #39ffcc;
-            text-decoration: none;
-        }
-
-        .post-list {
-            list-style: none;
-            padding: 0;
-        }
-
-        .post-item {
-            margin-bottom: 16px;
-        }
-
-        .meta {
-            display: inline-block;
-            width: 180px;
-            color: #d2b48c;
-        }
-
-        .post-item span {
-            display: inline-block;
-        }
-
-        footer {
-            margin-top: 100px;
-            display: flex;
-            justify-content: space-between;
-            color: #d2b48c;
-            font-size: 24px;
-        }
-
-        footer ul {
-            list-style: none;
-            padding: 0;
-        }
-
-        footer li {
-            display: inline;
-            margin-left: 18px;
-        }
-
-        footer a {
-            color: #f5e6d3;
-            text-decoration: underline;
-        }
-
-        @media (max-width: 768px) {
-            body {
-                padding: 30px 20px;
-                font-size: 22px;
-            }
-
-            h1 {
-                font-size: 42px;
-            }
-
-            .h1 {
-                font-size: 46px;
-            }
-
-            .meta {
-                display: block;
-                width: auto;
-                margin-bottom: 4px;
-            }
-
-            footer {
-                display: block;
-            }
-
-            footer .footer-right {
-                margin-top: 20px;
-            }
-        }
-    </style>
+    }
+    body.dark .project-card {
+        background: #2a2a2a;
+        border-color: #3a3a3a;
+    }
+    body.dark .project-desc {
+        color: #c0c0c0;
+    }
+    body.dark .project-tech {
+        color: #9e9e9e;
+        border-top-color: #3a3a3a;
+    }
+</style>
 </head>
 
-<body>
+<body class="max-width mx-auto px3 ltr">
+    
+    <div class="content index py4 h-card">
+        
+          <header id="header">
+  <a class="u-url u-uid" href="/">
+  
+    
+      <img id="logo" alt class="u-logo" src="/images/avatar.png" />
+    
+  
+    <div id="title">
+      <h1 class="p-name">alex's corner</h1>
+    </div>
+  </a>
+  <div id="nav">
+    <ul>
+      <li class="icon">
+        <a href="#" aria-label="Menu"><i class="fa-solid fa-bars fa-2x"></i></a>
+      </li>
+      <!--
+     --><li><a href="/">Home</a></li><!--
+   --><!--
+     --><li><a href="/about/">About</a></li><!--
+   --><!--
+     --><li><a href="/archives/">Writing</a></li><!--
+   -->
+    </ul>
+  </div>
+</header>
 
-    <div class="content">
+        
+        <section id="about" class="p-note">
+  
+  
+    <p>
+      Find me on
+      
+      
+      
+        
+        
+          <a class="icon u-url" target="_blank" rel="noopener me" href="http://github.com/alex-codes" aria-label="github" title="github">
+            <i class="fa-brands fa-github"></i><!--
+      ---></a><!--
+    ---><!--
+    ---> and 
+        
+      
+        
+        
+          <a class="icon u-email" target="_blank" rel="noopener" href="mailto:alex@proton.me" aria-label="mail" title="mail">
+            <i class="fa-solid fa-envelope"></i><!--
+      ---></a>
+        <!--
+    --->.
+        
+      
+    </p>
+  
+</section>
 
-        <header id="header">
-            <a href="/">
-                <!-- Put your avatar image inside /images/avatar.png -->
-                <img id="logo" src="/images/avatar.png" alt="logo" />
+<!-- MY WRITING SECTION - original posts replaced with my own content -->
+<section id="writing">
+  <span class="h1"><a href="/archives/">Writing</a></span>
+  
+  <ul class="post-list">
+    <!-- My original writing posts below -->
+    
+    <li class="post-item">
+      <div class="meta">
+        <time datetime="2026-05-15T01:00:00.000Z" class="dt-published" itemprop="datePublished">2026-05-15</time>
+      </div>
+      <span>
+        <a class="" href="/2026/05/15/exploiting-tcache/">Exploiting tcache per-thread caching in glibc 2.39</a>
+      </span>
+    </li>
+    
+    <li class="post-item">
+      <div class="meta">
+        <time datetime="2026-04-28T08:30:00.000Z" class="dt-published" itemprop="datePublished">2026-04-28</time>
+      </div>
+      <span>
+        <a class="" href="/2026/04/28/hvnc-internals/">HVNC internals: Hooking and window message spoofing</a>
+      </span>
+    </li>
+    
+    <li class="post-item">
+      <div class="meta">
+        <time datetime="2026-04-10T14:20:00.000Z" class="dt-published" itemprop="datePublished">2026-04-10</time>
+      </div>
+      <span>
+        <a class="" href="/2026/04/10/kernel-bypass/">Bypassing SMAP/SMEP with a custom kernel ROP chain</a>
+      </span>
+    </li>
+    
+    <li class="post-item">
+      <div class="meta">
+        <time datetime="2026-03-22T09:15:00.000Z" class="dt-published" itemprop="datePublished">2026-03-22</time>
+      </div>
+      <span>
+        <a class="" href="/2026/03/22/io-uring-exploit/">io_uring: Abusing kernel queues for local privilege escalation</a>
+      </span>
+    </li>
+    
+    <li class="post-item">
+      <div class="meta">
+        <time datetime="2026-03-05T11:45:00.000Z" class="dt-published" itemprop="datePublished">2026-03-05</time>
+      </div>
+      <span>
+        <a class="" href="/2026/03/05/fuzzing-windows/">Fuzzing Windows drivers with kAFL and introspection</a>
+      </span>
+    </li>
+    
+    <li class="post-item">
+      <div class="meta">
+        <time datetime="2026-02-18T06:00:00.000Z" class="dt-published" itemprop="datePublished">2026-02-18</time>
+      </div>
+      <span>
+        <a class="" href="/2026/02/18/obfuscation-llvm/">Practical obfuscation with LLVM: Control flow flattening and bogus control flow</a>
+      </span>
+    </li>
+    
+    <li class="post-item">
+      <div class="meta">
+        <time datetime="2026-01-30T13:10:00.000Z" class="dt-published" itemprop="datePublished">2026-01-30</time>
+      </div>
+      <span>
+        <a class="" href="/2026/01/30/andromeda-analysis/">Reverse engineering Andromeda: A deep dive into the loader</a>
+      </span>
+    </li>
+    
+    <li class="post-item">
+      <div class="meta">
+        <time datetime="2026-01-12T10:00:00.000Z" class="dt-published" itemprop="datePublished">2026-01-12</time>
+      </div>
+      <span>
+        <a class="" href="/2026/01/12/docker-escape/">Container breakouts: Abusing /proc and cgroups for Docker escape</a>
+      </span>
+    </li>
+    
+    <li class="post-item">
+      <div class="meta">
+        <time datetime="2025-12-20T16:30:00.000Z" class="dt-published" itemprop="datePublished">2025-12-20</time>
+      </div>
+      <span>
+        <a class="" href="/2025/12/20/return-to-dlresolve/">Return-to-dlresolve: Universal ROP without libc leaks</a>
+      </span>
+    </li>
+    
+    <li class="post-item">
+      <div class="meta">
+        <time datetime="2025-12-05T07:45:00.000Z" class="dt-published" itemprop="datePublished">2025-12-05</time>
+      </div>
+      <span>
+        <a class="" href="/2025/12/05/efi-exploitation/">UEFI firmware exploitation: SMM callout and variable attacks</a>
+      </span>
+    </li>
+    
+  </ul>
+  
+  <div class="section-header" style="margin-top: 1rem; border-bottom: none; justify-content: flex-end;">
+    <a href="/archives/" style="font-size: 0.85rem; text-decoration: none;">view all posts →</a>
+  </div>
+</section>
 
-                <div id="title">
-                    <h1>Nischal's blog</h1>
-                </div>
-            </a>
+<!-- PROJECTS SECTION -->
+<section id="projects">
+  <div class="section-header">
+    <span class="h1">Projects</span>
+    <a href="/projects/" style="font-size: 0.85rem; text-decoration: none;">view all →</a>
+  </div>
+  <div class="projects-grid">
+    <!-- Project Card 1 -->
+    <div class="project-card">
+      <div class="project-title">
+        <a href="#">heaperator</a>
+      </div>
+      <div class="project-desc">
+        A modern heap exploitation framework for glibc 2.35+ with automated tcache poisoning and House of Apple techniques.
+      </div>
+      <div class="project-tech">
+        C · Python · Binary Ninja plugin
+      </div>
+    </div>
+    <!-- Project Card 2 -->
+    <div class="project-card">
+      <div class="project-title">
+        <a href="#">async-visor</a>
+      </div>
+      <div class="project-desc">
+        Lightweight hypervisor introspection library using VT-x extensions to trace kernel‑mode rootkits.
+      </div>
+      <div class="project-tech">
+        Rust · x86_64 · UEFI
+      </div>
+    </div>
+    <!-- Project Card 3 -->
+    <div class="project-card">
+      <div class="project-title">
+        <a href="#">malleus</a>
+      </div>
+      <div class="project-desc">
+        Cross-platform post‑exploitation agent with HVNC, fileless execution and AMSI bypass primitives.
+      </div>
+      <div class="project-tech">
+        Nim · C · Windows/Linux
+      </div>
+    </div>
+    <!-- Project Card 4 -->
+    <div class="project-card">
+      <div class="project-title">
+        <a href="#">de2lphi</a>
+      </div>
+      <div class="project-desc">
+        LLVM obfuscator pass that transforms control flow into opaque predicates and fake indirect jumps.
+      </div>
+      <div class="project-tech">
+        C++ · LLVM 17 · CMake
+      </div>
+    </div>
+    <!-- Project Card 5 -->
+    <div class="project-card">
+      <div class="project-title">
+        <a href="#">nixery-shell</a>
+      </div>
+      <div class="project-desc">
+        Ephemeral development environments using Nix + Docker; instant REPL with patched gdb and pwntools.
+      </div>
+      <div class="project-tech">
+        Nix · Go · Docker
+      </div>
+    </div>
+    <!-- Project Card 6 -->
+    <div class="project-card">
+      <div class="project-title">
+        <a href="#">memoir-db</a>
+      </div>
+      <div class="project-desc">
+        Embedded, tamper‑evident key‑value store with incremental Merkle tree integrity verification.
+      </div>
+      <div class="project-tech">
+        Zig · Blake3 · io_uring
+      </div>
+    </div>
+  </div>
+</section>
 
-            <div id="nav">
-                <ul>
-                    <li><a href="/">Home</a></li>
-                    <li>|</li>
-                    <li><a href="/about/">About</a></li>
-                    <li>|</li>
-                    <li><a href="/archives/">Writing</a></li>
-                </ul>
-            </div>
-        </header>
 
-        <section id="about">
-            <p>
-                Find me on
-
-                <a target="_blank" href="https://github.com/nischal52" class="icon">
-                    <i class="fa-brands fa-github"></i>
-                </a>
-
-                and
-
-                <a href="mailto:yourmail@example.com" class="icon">
-                    <i class="fa-solid fa-envelope"></i>
-                </a>.
-            </p>
-        </section>
-
-        <section id="writing">
-            <span class="h1">
-                <a href="/archives/">Writing</a>
-            </span>
-
-            <ul class="post-list">
-
-                <li class="post-item">
-                    <div class="meta">2026-05-18</div>
-                    <span>
-                        <a href="#">Understanding Self-Supervised Learning</a>
-                    </span>
-                </li>
-
-                <li class="post-item">
-                    <div class="meta">2026-05-10</div>
-                    <span>
-                        <a href="#">Improving My Kaggle Training Pipeline</a>
-                    </span>
-                </li>
-
-                <li class="post-item">
-                    <div class="meta">2026-04-28</div>
-                    <span>
-                        <a href="#">CLIP Fine-Tuning Notes</a>
-                    </span>
-                </li>
-
-                <li class="post-item">
-                    <div class="meta">2026-04-01</div>
-                    <span>
-                        <a href="#">Vision Transformers Explained</a>
-                    </span>
-                </li>
-
-            </ul>
-        </section>
-
+        
         <footer id="footer">
-            <div class="footer-left">
-                Copyright © 2024–2026 Nischal
-            </div>
-
-            <div class="footer-right">
-                <nav>
-                    <ul>
-                        <li><a href="/">Home</a></li>
-                        <li>|</li>
-                        <li><a href="/about/">About</a></li>
-                        <li>|</li>
-                        <li><a href="/archives/">Writing</a></li>
-                    </ul>
-                </nav>
-            </div>
-        </footer>
+  <div class="footer-left">
+    Copyright &copy;
+    
+    
+    2024-2026
+    alex
+  </div>
+  <div class="footer-right">
+    <nav>
+      <ul>
+        <!--
+       --><li><a href="/">Home</a></li><!--
+     --><!--
+       --><li><a href="/about/">About</a></li><!--
+     --><!--
+       --><li><a href="/archives/">Writing</a></li><!--
+     -->
+      </ul>
+    </nav>
+  </div>
+</footer>
 
     </div>
+    <!-- styles -->
+
+
+
+  <link rel="preload" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" crossorigin="anonymous" onload="this.onload=null;this.rel='stylesheet'"/>
+
+
+    <!-- jquery -->
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" crossorigin="anonymous"></script>
+
+
+
+
+<!-- clipboard -->
+
+
+<script src="/js/main.js"></script>
+
+<!-- search -->
+
+<!-- Baidu Analytics -->
+
+<!-- Cloudflare Analytics -->
+
+  <script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "e2c0a56b5d4d466baf300058fd41c3e8"}'></script>
+
+<!-- Disqus Comments -->
+
+<!-- utterances Comments -->
 
 </body>
 </html>

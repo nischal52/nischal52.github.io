@@ -1,1 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nischal Khadka | Ml Enthusiast</title>
 
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: #f8fafc;
+        }
+
+        .gradient-text {
+            background: linear-gradient(90deg, #3b82f6, #10b981);
+            -webkit-background-clip: text;
+            color: transparent;
+        }
+
+        .gradient-bg {
+            background: linear-gradient(135deg, #3b82f6, #10b981);
+        }
+
+        .card {
+            transition: 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+        }
+    </style>
+</head>
+
+<body>
+
+<!-- NAV -->
+<nav class="bg-white shadow fixed w-full top-0 z-50">
+    <div class="max-w-6xl mx-auto flex justify-between items-center p-4">
+        <h1 class="font-bold gradient-text">Nischal</h1>
+        <div class="space-x-6 text-gray-700">
+            <a href="#about">About</a>
+            <a href="#writing">Writing</a>
+            <a href="#projects">Projects</a>
+        </div>
+    </div>
+</nav>
+
+<!-- HERO -->
+<section class="pt-28 text-center px-4">
+    <h1 class="text-4xl font-bold">
+        Hi, I'm <span class="gradient-text">Nischal Khadka</span>
+    </h1>
+    <p class="text-gray-600 mt-3">
+        AI | ML | Coder
+    </p>
+</section>
+
+    <h2 class="text-3xl font-bold mb-6">About Me</h2>
+
+    <p class="text-gray-700 mb-4">
+        I am a high school student passionate about Machine Learning and problem solving.
+        I have 2 years of experience in coding. I actively participate in AI and programming olympiads,
+        as well as mathematics and physics contests, where I enjoy solving challenging algorithmic problems.
+    </p>
+
+    <p class="text-gray-700 mb-4">
+        I solve Olympiad-level AI problems and curate my solutions in structured repositories
+        for learning, revision, and sharing with others.
+    </p>
+
+    <p class="text-gray-700 mb-4">
+        I have a strong passion for open-source software. Most of the tools and applications I use are open-source,
+        including browsers and development tools. I especially admire open-source operating systems such as Linux,
+        and I actively prefer working in environments like Arch Linux.
+    </p>
+
+    <p class="text-gray-700">
+        My long-term goal is to excel in olympiads and contribute to impactful research and open-source development.
+    </p>
+</section>
+
+<!-- WRITING -->
+<section id="writing" class="bg-gray-50 py-16 px-4">
+    <div class="max-w-5xl mx-auto">
+        <h2 class="text-3xl font-bold mb-6">Writing</h2>
+
+        <p class="text-gray-600 mb-6">
+            I write about AI, problem solving, and my learning journey.
+        </p>
+
+        <div class="grid md:grid-cols-2 gap-6">
+
+            <div class="bg-white p-6 rounded-xl shadow card">
+                <h3 class="font-bold">Olympiad Problem Solving</h3>
+                <p class="text-gray-600 text-sm mt-2">
+                    My thinking process for tackling hard AI/algorithm problems.
+                </p>
+            </div>
+
+            <div class="bg-white p-6 rounded-xl shadow card">
+                <h3 class="font-bold">ML Learning Notes</h3>
+                <p class="text-gray-600 text-sm mt-2">
+                    Notes from deep learning, computer vision, and experiments.
+                </p>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- PROJECTS -->
+<section id="projects" class="max-w-6xl mx-auto py-16 px-4">
+    <h2 class="text-3xl font-bold mb-6">My Projects</h2>
+
+    <div class="grid md:grid-cols-3 gap-6">
+
+
+
+        <!-- NEW -->
+        <div class="bg-white p-6 shadow rounded-xl border-l-4 border-blue-500 card">
+            <h3 class="font-bold">Handwritten Digit Recognizer</h3>
+            <p class="text-gray-600 text-sm mt-2">
+                CNN model trained on MNIST dataset for digit recognition.
+            </p>
+        </div>
+
+        <!-- PENDING -->
+        <div class="bg-white p-6 shadow rounded-xl border-l-4 border-yellow-500 card">
+            <h3 class="font-bold">Coming Soon Project</h3>
+            <p class="text-gray-600 text-sm mt-2">
+                Currently under development. Stay tuned for updates.
+            </p>
+        </div>
+
+    </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="text-center py-8 text-gray-500">
+    © 2026 Nischal Khadka
+</footer>
+
+</body>
+</html>

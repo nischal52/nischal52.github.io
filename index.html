@@ -3,9 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Your Name</title>
+    <title>Nischal's Blog</title>
 
+    <!-- Font Awesome Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Retro mono font -->
+    <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
 
     <style>
         * {
@@ -15,18 +19,18 @@
         }
 
         body {
-            font-family: Georgia, serif;
-            background: #ffffff;
-            color: #111;
-            max-width: 750px;
+            background: #0b1116;
+            color: #f5e6d3;
+            font-family: 'VT323', monospace;
+            max-width: 1050px;
             margin: auto;
-            padding: 40px 20px;
-            line-height: 1.8;
-            font-size: 17px;
+            padding: 40px 60px;
+            font-size: 24px;
+            line-height: 1.6;
         }
 
         a {
-            color: #111;
+            color: #f5e6d3;
             text-decoration: none;
         }
 
@@ -35,106 +39,172 @@
         }
 
         header {
-            margin-bottom: 60px;
+            margin-bottom: 80px;
+        }
+
+        .top {
+            display: flex;
+            align-items: center;
+            gap: 28px;
+        }
+
+        .logo {
+            width: 74px;
+            height: 74px;
+            border-radius: 4px;
+            object-fit: cover;
         }
 
         h1 {
-            font-size: 2rem;
+            font-size: 64px;
             font-weight: normal;
-            margin-bottom: 10px;
+            letter-spacing: 1px;
         }
 
         nav {
-            margin-top: 15px;
+            margin-top: 8px;
         }
 
         nav a {
-            margin-right: 20px;
-            font-size: 15px;
+            color: #39ffcc;
+            margin-right: 22px;
+            font-size: 28px;
+        }
+
+        nav span {
+            color: #39ffcc;
+            margin-right: 22px;
+        }
+
+        .social {
+            margin-top: 80px;
+            font-size: 28px;
+        }
+
+        .social a {
+            margin: 0 8px;
+            color: #f5e6d3;
         }
 
         section {
-            margin-bottom: 60px;
+            margin-top: 80px;
         }
 
         h2 {
-            font-size: 1.3rem;
+            color: #39ffcc;
+            font-size: 64px;
             font-weight: normal;
-            margin-bottom: 20px;
+            margin-bottom: 30px;
         }
 
-        .intro p {
-            margin-bottom: 15px;
-        }
-
-        .project,
-        .blog-post {
-            margin-bottom: 18px;
+        .post {
+            display: flex;
+            gap: 40px;
+            margin-bottom: 14px;
+            align-items: center;
         }
 
         .date {
-            color: #666;
-            font-size: 14px;
-            margin-right: 10px;
+            min-width: 140px;
+            color: #d2b48c;
+        }
+
+        .post a {
+            text-decoration: underline;
+        }
+
+        .about p,
+        .project {
+            margin-bottom: 18px;
+            max-width: 850px;
         }
 
         footer {
-            margin-top: 80px;
-            font-size: 14px;
-            color: #666;
+            margin-top: 100px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            color: #d2b48c;
+            font-size: 22px;
         }
 
-        .socials {
-            margin-top: 15px;
+        footer nav a {
+            color: #f5e6d3;
+            font-size: 24px;
         }
 
-        .socials a {
-            margin-right: 15px;
-            font-size: 18px;
+        @media (max-width: 768px) {
+            body {
+                padding: 30px 20px;
+                font-size: 20px;
+            }
+
+            h1 {
+                font-size: 42px;
+            }
+
+            h2 {
+                font-size: 46px;
+            }
+
+            .post {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 4px;
+            }
+
+            footer {
+                flex-direction: column;
+                gap: 20px;
+                align-items: flex-start;
+            }
         }
     </style>
 </head>
 <body>
 
     <header>
-        <h1>Your Name</h1>
-        <p>Student • Machine Learning • Computer Vision • Research</p>
+        <div class="top">
+            <!-- Replace avatar.png with your image -->
+            <img src="avatar.png" alt="logo" class="logo">
 
-        <nav>
-            <a href="#about">About</a>
-            <a href="#projects">Projects</a>
-            <a href="#blog">Writing</a>
-        </nav>
+            <div>
+                <h1>Nischal's blog</h1>
 
-        <div class="socials">
+                <nav>
+                    <a href="#home">Home</a>
+                    <span>|</span>
+                    <a href="#about">About</a>
+                    <span>|</span>
+                    <a href="#writing">Writing</a>
+                </nav>
+            </div>
+        </div>
+
+        <div class="social">
+            Find me on
             <a href="https://github.com/yourusername" target="_blank">
                 <i class="fa-brands fa-github"></i>
             </a>
-
+            and
             <a href="mailto:yourmail@example.com">
                 <i class="fa-solid fa-envelope"></i>
-            </a>
-
-            <a href="https://www.linkedin.com/in/yourprofile" target="_blank">
-                <i class="fa-brands fa-linkedin"></i>
-            </a>
+            </a>.
         </div>
     </header>
 
-    <section id="about" class="intro">
+    <section id="about" class="about">
         <h2>About</h2>
 
         <p>
-            Hi, I'm Your Name.
-            I work on machine learning, deep learning, and computer vision.
-            I enjoy building models, participating in hackathons, and exploring
-            research in self-supervised learning and representation learning.
+            Hi, I'm Nischal. I work on machine learning, deep learning,
+            computer vision, and research.
         </p>
 
         <p>
-            My interests include vision transformers, CLIP, multimodal learning,
-            and handwritten character recognition. I like solving difficult
-            engineering problems and writing about what I learn.
+            I enjoy building models, participating in hackathons,
+            solving olympiad-style problems, and exploring
+            self-supervised learning for vision.
         </p>
     </section>
 
@@ -142,42 +212,57 @@
         <h2>Projects</h2>
 
         <div class="project">
-            <a href="#">Devanagari Character Recognition</a><br>
-            CNN + Transformer based handwritten character recognition system.
+            <a href="#">Devanagari Character Recognition</a> —
+            handwritten character recognition using deep learning.
         </div>
 
         <div class="project">
-            <a href="#">Self-Supervised Vision Learning</a><br>
-            Representation learning using contrastive and SSL methods.
+            <a href="#">CLIP Fine-Tuning Pipeline</a> —
+            image-text embedding and efficient training pipeline.
         </div>
 
         <div class="project">
-            <a href="#">CLIP Fine-Tuning Pipeline</a><br>
-            Efficient fine-tuning and embedding extraction for image-text tasks.
+            <a href="#">Self-Supervised Vision Learning</a> —
+            representation learning with contrastive methods.
         </div>
     </section>
 
-    <section id="blog">
+    <section id="writing">
         <h2>Writing</h2>
 
-        <div class="blog-post">
-            <span class="date">2026-05-18</span>
-            <a href="#">Understanding Self-Supervised Learning for Vision</a>
+        <div class="post">
+            <div class="date">2026-05-18</div>
+            <a href="#">Understanding Self-Supervised Learning</a>
         </div>
 
-        <div class="blog-post">
-            <span class="date">2026-05-10</span>
-            <a href="#">How I Improved My Kaggle Training Pipeline</a>
+        <div class="post">
+            <div class="date">2026-05-10</div>
+            <a href="#">Improving My Kaggle Training Pipeline</a>
         </div>
 
-        <div class="blog-post">
-            <span class="date">2026-04-28</span>
+        <div class="post">
+            <div class="date">2026-04-28</div>
             <a href="#">CLIP Fine-Tuning Notes</a>
+        </div>
+
+        <div class="post">
+            <div class="date">2026-04-01</div>
+            <a href="#">Vision Transformers Explained</a>
         </div>
     </section>
 
     <footer>
-        © 2026 Your Name
+        <div>
+            Copyright © 2024–2026 Nischal
+        </div>
+
+        <nav>
+            <a href="#home">Home</a>
+            <span>|</span>
+            <a href="#about">About</a>
+            <span>|</span>
+            <a href="#writing">Writing</a>
+        </nav>
     </footer>
 
 </body>

@@ -1,269 +1,305 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nischal's Blog</title>
+    <!-- Meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5" />
 
-    <!-- Font Awesome Icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Nischal's blog">
+    <meta property="og:url" content="https://nischal52.github.io/index.html">
+    <meta property="og:site_name" content="Nischal's blog">
+    <meta property="og:locale" content="en_US">
+    <meta property="article:author" content="Nischal">
+    <meta name="twitter:card" content="summary">
 
-    <!-- Retro mono font -->
+    <!-- Title -->
+    <title>Nischal's blog</title>
+
+    <!-- Icons -->
+    <link rel="shortcut icon" href="/images/favicon.ico">
+    <link rel="icon" type="image/png" href="/images/android-chrome-192x192.png" sizes="192x192">
+    <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+
+    <!-- Font Awesome -->
+    <link rel="preload" as="style"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        crossorigin="anonymous"
+        onload="this.onload=null;this.rel='stylesheet'" />
+
+    <!-- Google Font -->
     <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
 
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
         body {
-            background: #0b1116;
+            background: #0d1117;
             color: #f5e6d3;
             font-family: 'VT323', monospace;
-            max-width: 1050px;
+            font-size: 28px;
+            line-height: 1.5;
+            max-width: 1100px;
             margin: auto;
             padding: 40px 60px;
-            font-size: 24px;
-            line-height: 1.6;
         }
 
         a {
             color: #f5e6d3;
-            text-decoration: none;
-        }
-
-        a:hover {
             text-decoration: underline;
         }
 
-        header {
-            margin-bottom: 80px;
+        a:hover {
+            color: #39ffcc;
         }
 
-        .top {
-            display: flex;
-            align-items: center;
-            gap: 28px;
+        #header {
+            margin-bottom: 70px;
         }
 
-        .logo {
-            width: 74px;
-            height: 74px;
+        #header a {
+            text-decoration: none;
+        }
+
+        #logo {
+            width: 72px;
+            height: 72px;
             border-radius: 4px;
             object-fit: cover;
+            vertical-align: middle;
+            margin-right: 20px;
+        }
+
+        #title {
+            display: inline-block;
+            vertical-align: middle;
         }
 
         h1 {
             font-size: 64px;
             font-weight: normal;
-            letter-spacing: 1px;
-        }
-
-        nav {
-            margin-top: 8px;
-        }
-
-        nav a {
-            color: #39ffcc;
-            margin-right: 22px;
-            font-size: 28px;
-        }
-
-        nav span {
-            color: #39ffcc;
-            margin-right: 22px;
-        }
-
-        .social {
-            margin-top: 80px;
-            font-size: 28px;
-        }
-
-        .social a {
-            margin: 0 8px;
+            margin: 0;
             color: #f5e6d3;
         }
 
-        section {
-            margin-top: 80px;
+        #nav {
+            margin-top: 10px;
         }
 
-        h2 {
+        #nav ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        #nav li {
+            display: inline;
+            margin-right: 18px;
+        }
+
+        #nav li a {
             color: #39ffcc;
+            text-decoration: none;
+            font-size: 30px;
+        }
+
+        #about {
+            margin-top: 60px;
+            margin-bottom: 100px;
+        }
+
+        #about a {
+            text-decoration: none;
+        }
+
+        .icon {
+            margin: 0 6px;
+            font-size: 28px;
+        }
+
+        .h1 {
             font-size: 64px;
-            font-weight: normal;
+            color: #39ffcc;
             margin-bottom: 30px;
+            display: block;
         }
 
-        .post {
-            display: flex;
-            gap: 40px;
-            margin-bottom: 14px;
-            align-items: center;
+        .h1 a {
+            color: #39ffcc;
+            text-decoration: none;
         }
 
-        .date {
-            min-width: 140px;
+        .post-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .post-item {
+            margin-bottom: 16px;
+        }
+
+        .meta {
+            display: inline-block;
+            width: 180px;
             color: #d2b48c;
         }
 
-        .post a {
-            text-decoration: underline;
-        }
-
-        .about p,
-        .project {
-            margin-bottom: 18px;
-            max-width: 850px;
+        .post-item span {
+            display: inline-block;
         }
 
         footer {
             margin-top: 100px;
             display: flex;
             justify-content: space-between;
-            align-items: center;
             color: #d2b48c;
-            font-size: 22px;
+            font-size: 24px;
         }
 
-        footer nav a {
+        footer ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        footer li {
+            display: inline;
+            margin-left: 18px;
+        }
+
+        footer a {
             color: #f5e6d3;
-            font-size: 24px;
+            text-decoration: underline;
         }
 
         @media (max-width: 768px) {
             body {
                 padding: 30px 20px;
-                font-size: 20px;
+                font-size: 22px;
             }
 
             h1 {
                 font-size: 42px;
             }
 
-            h2 {
+            .h1 {
                 font-size: 46px;
             }
 
-            .post {
-                flex-direction: column;
-                align-items: flex-start;
-                gap: 4px;
+            .meta {
+                display: block;
+                width: auto;
+                margin-bottom: 4px;
             }
 
             footer {
-                flex-direction: column;
-                gap: 20px;
-                align-items: flex-start;
+                display: block;
+            }
+
+            footer .footer-right {
+                margin-top: 20px;
             }
         }
     </style>
 </head>
+
 <body>
 
-    <header>
-        <div class="top">
-            <!-- Replace avatar.png with your image -->
-            <img src="avatar.png" alt="logo" class="logo">
+    <div class="content">
 
-            <div>
-                <h1>Nischal's blog</h1>
+        <header id="header">
+            <a href="/">
+                <!-- Put your avatar image inside /images/avatar.png -->
+                <img id="logo" src="/images/avatar.png" alt="logo" />
 
+                <div id="title">
+                    <h1>Nischal's blog</h1>
+                </div>
+            </a>
+
+            <div id="nav">
+                <ul>
+                    <li><a href="/">Home</a></li>
+                    <li>|</li>
+                    <li><a href="/about/">About</a></li>
+                    <li>|</li>
+                    <li><a href="/archives/">Writing</a></li>
+                </ul>
+            </div>
+        </header>
+
+        <section id="about">
+            <p>
+                Find me on
+
+                <a target="_blank" href="https://github.com/nischal52" class="icon">
+                    <i class="fa-brands fa-github"></i>
+                </a>
+
+                and
+
+                <a href="mailto:yourmail@example.com" class="icon">
+                    <i class="fa-solid fa-envelope"></i>
+                </a>.
+            </p>
+        </section>
+
+        <section id="writing">
+            <span class="h1">
+                <a href="/archives/">Writing</a>
+            </span>
+
+            <ul class="post-list">
+
+                <li class="post-item">
+                    <div class="meta">2026-05-18</div>
+                    <span>
+                        <a href="#">Understanding Self-Supervised Learning</a>
+                    </span>
+                </li>
+
+                <li class="post-item">
+                    <div class="meta">2026-05-10</div>
+                    <span>
+                        <a href="#">Improving My Kaggle Training Pipeline</a>
+                    </span>
+                </li>
+
+                <li class="post-item">
+                    <div class="meta">2026-04-28</div>
+                    <span>
+                        <a href="#">CLIP Fine-Tuning Notes</a>
+                    </span>
+                </li>
+
+                <li class="post-item">
+                    <div class="meta">2026-04-01</div>
+                    <span>
+                        <a href="#">Vision Transformers Explained</a>
+                    </span>
+                </li>
+
+            </ul>
+        </section>
+
+        <footer id="footer">
+            <div class="footer-left">
+                Copyright © 2024–2026 Nischal
+            </div>
+
+            <div class="footer-right">
                 <nav>
-                    <a href="#home">Home</a>
-                    <span>|</span>
-                    <a href="#about">About</a>
-                    <span>|</span>
-                    <a href="#writing">Writing</a>
+                    <ul>
+                        <li><a href="/">Home</a></li>
+                        <li>|</li>
+                        <li><a href="/about/">About</a></li>
+                        <li>|</li>
+                        <li><a href="/archives/">Writing</a></li>
+                    </ul>
                 </nav>
             </div>
-        </div>
+        </footer>
 
-        <div class="social">
-            Find me on
-            <a href="https://github.com/yourusername" target="_blank">
-                <i class="fa-brands fa-github"></i>
-            </a>
-            and
-            <a href="mailto:yourmail@example.com">
-                <i class="fa-solid fa-envelope"></i>
-            </a>.
-        </div>
-    </header>
-
-    <section id="about" class="about">
-        <h2>About</h2>
-
-        <p>
-            Hi, I'm Nischal. I work on machine learning, deep learning,
-            computer vision, and research.
-        </p>
-
-        <p>
-            I enjoy building models, participating in hackathons,
-            solving olympiad-style problems, and exploring
-            self-supervised learning for vision.
-        </p>
-    </section>
-
-    <section id="projects">
-        <h2>Projects</h2>
-
-        <div class="project">
-            <a href="#">Devanagari Character Recognition</a> —
-            handwritten character recognition using deep learning.
-        </div>
-
-        <div class="project">
-            <a href="#">CLIP Fine-Tuning Pipeline</a> —
-            image-text embedding and efficient training pipeline.
-        </div>
-
-        <div class="project">
-            <a href="#">Self-Supervised Vision Learning</a> —
-            representation learning with contrastive methods.
-        </div>
-    </section>
-
-    <section id="writing">
-        <h2>Writing</h2>
-
-        <div class="post">
-            <div class="date">2026-05-18</div>
-            <a href="#">Understanding Self-Supervised Learning</a>
-        </div>
-
-        <div class="post">
-            <div class="date">2026-05-10</div>
-            <a href="#">Improving My Kaggle Training Pipeline</a>
-        </div>
-
-        <div class="post">
-            <div class="date">2026-04-28</div>
-            <a href="#">CLIP Fine-Tuning Notes</a>
-        </div>
-
-        <div class="post">
-            <div class="date">2026-04-01</div>
-            <a href="#">Vision Transformers Explained</a>
-        </div>
-    </section>
-
-    <footer>
-        <div>
-            Copyright © 2024–2026 Nischal
-        </div>
-
-        <nav>
-            <a href="#home">Home</a>
-            <span>|</span>
-            <a href="#about">About</a>
-            <span>|</span>
-            <a href="#writing">Writing</a>
-        </nav>
-    </footer>
+    </div>
 
 </body>
 </html>
